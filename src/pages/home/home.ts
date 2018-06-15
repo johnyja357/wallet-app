@@ -18,7 +18,7 @@ export class HomePage {
   }
 
   transfer(){
-    if(this.balanceInputA<=this.walletA && this.balanceInputA !== "0"){
+    if(this.balanceInputA<=this.walletA && this.balanceInputA !== "0" && this.balanceInputA !== "00" && this.balanceInputA !== "000"){
       this.walletA -= parseInt(this.balanceInputA.toString());
       this.walletB += parseInt(this.balanceInputA.toString());
 
@@ -39,7 +39,7 @@ export class HomePage {
   }
 
   refund(){
-    if(this.balanceInputB<=this.walletB && this.balanceInputB !== "0"){
+    if(this.balanceInputB<=this.walletB && this.balanceInputB !== "0" && this.balanceInputB !== "00" && this.balanceInputB !== "000"){
       this.walletB -= parseInt(this.balanceInputB.toString());
       this.walletA += parseInt(this.balanceInputB.toString());
 
